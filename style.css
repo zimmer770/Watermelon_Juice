@@ -170,7 +170,7 @@ img {
   height: 580px;
   border-radius: 10rem;
   opacity: 0.4;
-  background-color: #ff0037; /* Example juice color */
+  transition: all 0.5s ease-out;
   z-index: 23;
 }
 
