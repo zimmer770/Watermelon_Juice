@@ -221,11 +221,10 @@ function updateFlavorDisplay() {
   elements.flavorMeter.style.width = meterWidth + "%";
 
   // Update juice color
-  elements.juice.style.transition = "all 1s ease";
+  elements.juice.style.transition = "all 0.5s ease";
   elements.juice.style.backgroundColor = flavorData.color;
   elements.juice.style.opacity = flavorData.opacity;
 
-  // Update fact text
   elements.factText.innerHTML = flavorData.name + flavorData.fact;
 
   console.log(`Flavor: ${flavorData.name} (${juiceState.flavorIntensity}%)`);
