@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .juiceContainer {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 40vh;
+        height: 80vh;
+        vertical-align: middle;
+      }
+
+      .circle1 {
+        display: block;
+        border-radius: 40vh;
+        height: 40vh;
+        width: 40vh;
+        border: 1px solid #222;
+        vertical-align: top;
+      }
+
+      .circle2 {
+        display: block;
+        border-radius: 40vh;
+        height: 40vh;
+        width: 40vh;
+        border: 1px solid #222;
+        vertical-align: bottom;
+      }
+
+      .juice {
+        position: absolute;
+        bottom: -3.5px;
+        left: 0;
+        border-radius: 40vh;
+        height: 75vh;
+        width: 40vh;
+        border: 1px solid #222;
+        background-color: pink;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="juiceContainer">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="juice"></div>
+    </div>
+  </body>
+</html>

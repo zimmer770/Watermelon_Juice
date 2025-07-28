@@ -62,9 +62,18 @@ img {
   bottom: 0;
   width: 70%;
   height: 50%;
-  z-index: inherit;
+  z-index: 3;
 }
 
+.rectangle2 {
+  background-color: #ffe4e4;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 2;
+}
 .imageContainer {
   position: absolute;
   top: 0;
@@ -207,8 +216,9 @@ img {
   border: 1px solid #222;
   color: #f8d7da;
   border-radius: 50%;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Walter Turncoat", cursive;
 }
 
 .refill {
@@ -236,30 +246,32 @@ img {
 
 .flavour {
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center to flex-start */
   display: flex;
   background-color: #38bd7d;
   border: 1px solid #222;
   border-radius: 5rem;
   width: 40%;
   height: 5%;
-  top: 12%; /* Offset from top-right corner */
-  right: 16%; /* Offset from top-right corner */
+  top: 12%;
+  right: 16%;
   position: absolute;
-  z-index: 33; /* Slightly higher to ensure it stays on top */
+  z-index: 33;
+  overflow: hidden; /* Prevent meter from going outside */
+  padding: 3px; /* Add small padding for better visual containment */
 }
 .meter {
-  align-items: center;
-  justify-content: center;
-  display: flex;
   background: linear-gradient(90deg, #ffb5b5, #f00000);
   border: 1px solid #222;
   border-radius: 5rem;
-  width: 50%;
+  width: 50%; /* This will be dynamically updated by JavaScript */
   height: 70%;
-  left: 2%;
-  position: absolute;
-  z-index: 34; /* Slightly higher to ensure it stays on top */
+  min-width: 10px; /* Minimum width to always show some meter */
+  max-width: calc(100% - 6px); /* Maximum width minus padding */
+  position: relative; /* Changed from absolute to relative */
+  left: 0; /* Reset left positioning */
+  transition: width 0.2s ease;
+  z-index: 34;
 }
 
 .volume {
@@ -596,7 +608,7 @@ img {
   width: 35%;
   font-size: 1.5rem;
   color: #ffffff;
-  text-align: justify;
+  text-align: right;
 }
 
 .social {
@@ -637,7 +649,7 @@ img {
   animation: pulse 1s infinite;
   background-color: var(--juice-pink);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @keyframes pulse {
@@ -654,7 +666,7 @@ img {
 
 .straw2:hover {
   animation: bounceRotate 0.8s ease;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @keyframes bounceRotate {
