@@ -221,6 +221,7 @@ function updateFlavorDisplay() {
   elements.flavorMeter.style.width = meterWidth + "%";
 
   // Update juice color
+  elements.juice.style.transition = "all 1s ease";
   elements.juice.style.backgroundColor = flavorData.color;
   elements.juice.style.opacity = flavorData.opacity;
 
